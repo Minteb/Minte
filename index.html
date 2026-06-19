@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minte – Geospatial Scientist & PhD Researcher</title>
+  <title>Mintesnot Berhanu Tilahun – Geospatial Data Scientist</title>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    /* ── TOKENS ──────────────────────────────────────────── */
     :root {
       --ink:        #1a1a1a;
       --ink-muted:  #4a4a4a;
@@ -14,552 +13,155 @@
       --paper:      #f8f7f4;
       --paper-alt:  #ffffff;
       --rule:       #d8d4cc;
-      --accent:     #2b5741;      /* deep forest green — earth / remote sensing */
+      --accent:     #2b5741;
       --accent-lt:  #e8f0eb;
-      --amber:      #b5601a;      /* warm complement for highlights */
+      --amber:      #b5601a;
       --mono:       'JetBrains Mono', monospace;
       --serif:      'EB Garamond', Georgia, serif;
       --sans:       'Inter', system-ui, sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.65; }
 
-    body {
-      font-family: var(--sans);
-      background: var(--paper);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.65;
-    }
-
-    /* ── NAVIGATION ─────────────────────────────────────── */
+    /* NAV */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(248,247,244,0.92);
-      backdrop-filter: blur(8px);
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(248,247,244,0.92); backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--rule);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2.5rem;
-      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 56px;
     }
-
-    nav .logo {
-      font-family: var(--serif);
-      font-size: 1.15rem;
-      font-style: italic;
-      color: var(--accent);
-      letter-spacing: 0.01em;
-      text-decoration: none;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav ul a {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    nav .logo { font-family: var(--serif); font-size: 1.15rem; font-style: italic; color: var(--accent); text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: 1.6rem; }
+    nav ul a { font-size: 0.76rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); text-decoration: none; transition: color 0.2s; }
     nav ul a:hover { color: var(--accent); }
 
-    /* ── HERO ────────────────────────────────────────────── */
-    .hero {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 6rem 2.5rem 4rem;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--accent);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 600;
-      line-height: 1.1;
-      color: var(--ink);
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-tagline {
-      font-size: 1.05rem;
-      color: var(--ink-muted);
-      max-width: 520px;
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2.4rem;
-    }
-
-    .badge {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      padding: 0.3rem 0.75rem;
-      border: 1px solid var(--accent);
-      border-radius: 2px;
-      color: var(--accent);
-      letter-spacing: 0.06em;
-    }
-
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.65rem 1.4rem;
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      border-radius: 3px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      border: 1px solid var(--accent);
-    }
-
-    .btn-primary:hover { background: #1e3f2e; border-color: #1e3f2e; }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-    }
-
+    /* HERO */
+    .hero { max-width: 920px; margin: 0 auto; padding: 6rem 2.5rem 4rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+    .hero-eyebrow { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem; }
+    .hero h1 { font-family: var(--serif); font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 600; line-height: 1.1; color: var(--ink); margin-bottom: 1.2rem; }
+    .hero-tagline { font-size: 1rem; color: var(--ink-muted); max-width: 540px; line-height: 1.75; margin-bottom: 2rem; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.4rem; }
+    .badge { font-family: var(--mono); font-size: 0.66rem; padding: 0.28rem 0.7rem; border: 1px solid var(--accent); border-radius: 2px; color: var(--accent); letter-spacing: 0.06em; }
+    .hero-links { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.65rem 1.4rem; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; border-radius: 3px; cursor: pointer; text-decoration: none; transition: all 0.2s; border: none; }
+    .btn-primary { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+    .btn-primary:hover { background: #1e3f2e; }
+    .btn-outline { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
     .btn-outline:hover { background: var(--accent-lt); }
 
-    /* Coordinate block — the signature element */
-    .hero-coords {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--ink-faint);
-      background: var(--paper-alt);
-      border: 1px solid var(--rule);
-      border-top: 3px solid var(--accent);
-      padding: 1.4rem;
-      line-height: 2.2;
-      min-width: 200px;
-      text-align: right;
-    }
+    /* Coordinate card */
+    .hero-coords { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faint); background: var(--paper-alt); border: 1px solid var(--rule); border-top: 3px solid var(--accent); padding: 1.4rem; line-height: 2.2; min-width: 200px; text-align: right; }
+    .hero-coords span { display: block; color: var(--ink-muted); }
+    .hero-coords .coord-label { color: var(--ink-faint); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
-    .hero-coords span {
-      display: block;
-      color: var(--ink-muted);
-    }
+    /* Award banner */
+    .award-banner { max-width: 920px; margin: 0 auto 0; padding: 0 2.5rem; }
+    .award-pill { display: inline-flex; align-items: center; gap: 0.6rem; background: #fff8f0; border: 1px solid #e8c9a0; border-left: 3px solid var(--amber); padding: 0.7rem 1.2rem; border-radius: 3px; font-size: 0.83rem; color: var(--amber); font-weight: 500; }
+    .award-pill span { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; }
 
-    .hero-coords .coord-label {
-      color: var(--ink-faint);
-      font-size: 0.62rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
+    /* LAYOUT */
+    .container { max-width: 920px; margin: 0 auto; padding: 0 2.5rem; }
+    .section { padding: 4rem 0; border-top: 1px solid var(--rule); }
+    .section-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2.5rem; }
+    .section-label { font-family: var(--mono); font-size: 0.65rem; color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
+    .section h2 { font-family: var(--serif); font-size: 1.9rem; font-weight: 600; color: var(--ink); line-height: 1.2; }
 
-    /* ── LAYOUT SHELL ────────────────────────────────────── */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 2.5rem;
-    }
-
-    /* ── SECTION TITLES ──────────────────────────────────── */
-    .section {
-      padding: 4rem 0;
-      border-top: 1px solid var(--rule);
-    }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .section-label {
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      color: var(--accent);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .section h2 {
-      font-family: var(--serif);
-      font-size: 1.9rem;
-      font-weight: 600;
-      color: var(--ink);
-      line-height: 1.2;
-    }
-
-    /* ── STORY ───────────────────────────────────────────── */
-    .story-text {
-      font-family: var(--serif);
-      font-size: 1.18rem;
-      line-height: 1.85;
-      color: var(--ink-muted);
-      max-width: 680px;
-    }
-
+    /* STORY */
+    .story-text { font-family: var(--serif); font-size: 1.15rem; line-height: 1.85; color: var(--ink-muted); max-width: 700px; }
     .story-text p + p { margin-top: 1.2rem; }
-
     .story-text strong { color: var(--ink); font-weight: 600; }
 
-    /* ── SKILLS ──────────────────────────────────────────── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1rem;
-    }
+    /* SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    .skill-group { background: var(--paper-alt); border: 1px solid var(--rule); padding: 1.2rem 1.4rem; border-left: 3px solid var(--accent); }
+    .skill-group-title { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; }
+    .skill-list { list-style: none; font-size: 0.87rem; color: var(--ink-muted); line-height: 2; }
 
-    .skill-group {
-      background: var(--paper-alt);
-      border: 1px solid var(--rule);
-      padding: 1.2rem 1.4rem;
-      border-left: 3px solid var(--accent);
-    }
-
-    .skill-group-title {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-    }
-
-    .skill-list {
-      list-style: none;
-      font-size: 0.88rem;
-      color: var(--ink-muted);
-      line-height: 2;
-    }
-
-    /* ── TIMELINE (Experience / Education) ───────────────── */
-    .timeline { display: flex; flex-direction: column; gap: 0; }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 2rem;
-      padding: 1.8rem 0;
-      border-bottom: 1px solid var(--rule);
-      position: relative;
-    }
-
+    /* TIMELINE */
+    .timeline { display: flex; flex-direction: column; }
+    .timeline-item { display: grid; grid-template-columns: 150px 1fr; gap: 2rem; padding: 1.8rem 0; border-bottom: 1px solid var(--rule); position: relative; }
     .timeline-item:last-child { border-bottom: none; }
+    .tl-date { font-family: var(--mono); font-size: 0.7rem; color: var(--ink-faint); padding-top: 0.25rem; letter-spacing: 0.04em; line-height: 1.6; }
+    .tl-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); position: absolute; left: 138px; top: 2.1rem; }
+    .tl-title { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.2rem; }
+    .tl-org { font-size: 0.88rem; color: var(--accent); margin-bottom: 0.6rem; font-style: italic; }
+    .tl-desc { font-size: 0.87rem; color: var(--ink-muted); line-height: 1.72; }
+    .tl-desc ul { padding-left: 1.1rem; margin-top: 0.5rem; }
+    .tl-desc li { margin-bottom: 0.3rem; }
+    .tl-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.8rem; }
+    .tl-tag { font-family: var(--mono); font-size: 0.62rem; padding: 0.2rem 0.55rem; background: var(--accent-lt); color: var(--accent); border-radius: 2px; letter-spacing: 0.05em; }
 
-    .tl-date {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--ink-faint);
-      padding-top: 0.25rem;
-      letter-spacing: 0.04em;
-    }
-
-    .tl-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      position: absolute;
-      left: 128px;
-      top: 2.1rem;
-    }
-
-    .tl-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 0.2rem;
-    }
-
-    .tl-org {
-      font-size: 0.88rem;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-      font-style: italic;
-    }
-
-    .tl-desc {
-      font-size: 0.88rem;
-      color: var(--ink-muted);
-      line-height: 1.7;
-    }
-
-    .tl-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      margin-top: 0.8rem;
-    }
-
-    .tl-tag {
-      font-family: var(--mono);
-      font-size: 0.63rem;
-      padding: 0.2rem 0.55rem;
-      background: var(--accent-lt);
-      color: var(--accent);
-      border-radius: 2px;
-      letter-spacing: 0.05em;
-    }
-
-    /* ── PUBLICATIONS ────────────────────────────────────── */
+    /* PUBLICATIONS */
     .pub-list { display: flex; flex-direction: column; gap: 1.4rem; }
-
-    .pub-item {
-      padding: 1.3rem 1.5rem;
-      background: var(--paper-alt);
-      border: 1px solid var(--rule);
-      border-left: 3px solid var(--amber);
-    }
-
-    .pub-title {
-      font-family: var(--serif);
-      font-size: 1.02rem;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 0.4rem;
-    }
-
-    .pub-meta {
-      font-size: 0.82rem;
-      color: var(--ink-faint);
-      font-style: italic;
-      margin-bottom: 0.5rem;
-    }
-
-    .pub-abstract {
-      font-size: 0.85rem;
-      color: var(--ink-muted);
-      line-height: 1.65;
-    }
-
-    .pub-link {
-      display: inline-block;
-      margin-top: 0.6rem;
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--amber);
-      text-decoration: none;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
+    .pub-item { padding: 1.3rem 1.5rem; background: var(--paper-alt); border: 1px solid var(--rule); border-left: 3px solid var(--amber); }
+    .pub-title { font-family: var(--serif); font-size: 1.02rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; }
+    .pub-meta { font-size: 0.82rem; color: var(--ink-faint); font-style: italic; margin-bottom: 0.5rem; }
+    .pub-abstract { font-size: 0.85rem; color: var(--ink-muted); line-height: 1.65; }
+    .pub-link { display: inline-block; margin-top: 0.6rem; font-family: var(--mono); font-size: 0.7rem; color: var(--amber); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; }
     .pub-link:hover { text-decoration: underline; }
 
-    /* ── PROJECTS ────────────────────────────────────────── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.2rem;
-    }
+    /* AWARD highlight */
+    .award-item { padding: 1.3rem 1.5rem; background: #fff8f0; border: 1px solid #e8c9a0; border-left: 3px solid var(--amber); margin-bottom: 1rem; }
+    .award-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+    .award-meta { font-size: 0.83rem; color: var(--amber); font-style: italic; }
 
-    .project-card {
-      background: var(--paper-alt);
-      border: 1px solid var(--rule);
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      transition: border-color 0.2s, transform 0.2s;
-    }
+    /* PROJECTS */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1.2rem; }
+    .project-card { background: var(--paper-alt); border: 1px solid var(--rule); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; transition: border-color 0.2s, transform 0.2s; }
+    .project-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .project-icon { font-size: 1.5rem; }
+    .project-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); }
+    .project-desc { font-size: 0.83rem; color: var(--ink-muted); line-height: 1.65; flex: 1; }
+    .project-tools { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.4rem; }
+    .project-tool { font-family: var(--mono); font-size: 0.62rem; padding: 0.15rem 0.5rem; border: 1px solid var(--rule); color: var(--ink-faint); border-radius: 2px; }
 
-    .project-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .project-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .project-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-
-    .project-desc {
-      font-size: 0.83rem;
-      color: var(--ink-muted);
-      line-height: 1.65;
-      flex: 1;
-    }
-
-    .project-tools {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      margin-top: 0.4rem;
-    }
-
-    .project-tool {
-      font-family: var(--mono);
-      font-size: 0.62rem;
-      padding: 0.15rem 0.5rem;
-      border: 1px solid var(--rule);
-      color: var(--ink-faint);
-      border-radius: 2px;
-    }
-
-    /* ── CONTACT ─────────────────────────────────────────── */
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .contact-intro {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      color: var(--ink-muted);
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
-    }
-
+    /* CONTACT */
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .contact-intro { font-family: var(--serif); font-size: 1.1rem; color: var(--ink-muted); line-height: 1.75; margin-bottom: 1.5rem; }
     .contact-links { display: flex; flex-direction: column; gap: 0.8rem; }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 0.88rem;
-      color: var(--ink-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    .contact-link { display: flex; align-items: center; gap: 0.8rem; font-size: 0.88rem; color: var(--ink-muted); text-decoration: none; transition: color 0.2s; word-break: break-all; }
     .contact-link:hover { color: var(--accent); }
-
-    .contact-link-icon {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      background: var(--accent-lt);
-      color: var(--accent);
-      padding: 0.3rem 0.6rem;
-      border-radius: 2px;
-      min-width: 70px;
-      text-align: center;
-      letter-spacing: 0.06em;
-    }
-
-    /* Contact Form */
+    .contact-link-icon { font-family: var(--mono); font-size: 0.68rem; background: var(--accent-lt); color: var(--accent); padding: 0.3rem 0.55rem; border-radius: 2px; min-width: 72px; text-align: center; letter-spacing: 0.06em; flex-shrink: 0; }
     .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-
     .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
-
-    .form-group label {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-    }
-
-    .form-group input,
-    .form-group textarea {
-      font-family: var(--sans);
-      font-size: 0.9rem;
-      padding: 0.65rem 0.9rem;
-      border: 1px solid var(--rule);
-      background: var(--paper-alt);
-      color: var(--ink);
-      border-radius: 3px;
-      transition: border-color 0.2s;
-      outline: none;
-      resize: vertical;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus { border-color: var(--accent); }
-
+    .form-group label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+    .form-group input, .form-group textarea { font-family: var(--sans); font-size: 0.9rem; padding: 0.65rem 0.9rem; border: 1px solid var(--rule); background: var(--paper-alt); color: var(--ink); border-radius: 3px; transition: border-color 0.2s; outline: none; resize: vertical; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); }
     .form-group textarea { min-height: 110px; }
+    .form-note { font-size: 0.78rem; color: var(--ink-faint); margin-top: 0.3rem; }
 
-    .form-note {
-      font-size: 0.78rem;
-      color: var(--ink-faint);
-      margin-top: 0.3rem;
-    }
+    /* MEMBERSHIPS */
+    .membership-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .membership-item { display: flex; align-items: center; gap: 0.9rem; font-size: 0.9rem; color: var(--ink-muted); }
+    .membership-item::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 
-    /* ── FOOTER ──────────────────────────────────────────── */
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 2rem 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+    /* FOOTER */
+    footer { border-top: 1px solid var(--rule); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; max-width: 920px; margin: 0 auto; }
+    footer p { font-family: var(--mono); font-size: 0.68rem; color: var(--ink-faint); letter-spacing: 0.06em; }
 
-    footer p {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      color: var(--ink-faint);
-      letter-spacing: 0.06em;
-    }
-
-    /* ── RESPONSIVE ──────────────────────────────────────── */
+    /* RESPONSIVE */
     @media (max-width: 720px) {
       nav ul { display: none; }
       .hero { grid-template-columns: 1fr; padding: 3rem 1.2rem 2rem; }
       .hero-coords { display: none; }
       .container { padding: 0 1.2rem; }
+      .award-banner { padding: 0 1.2rem; }
       .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
       .tl-dot { display: none; }
       .contact-layout { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { transition: none !important; animation: none !important; }
-    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
   </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a class="logo" href="#">Minte</a>
+  <a class="logo" href="#">Mintesnot Berhanu</a>
   <ul>
     <li><a href="#story">Story</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -574,28 +176,28 @@
 <!-- HERO -->
 <div class="hero">
   <div>
-    <p class="hero-eyebrow">PhD Researcher · Geospatial Science</p>
-    <h1>Mapping Earth.<br/>Feeding the World.</h1>
+    <p class="hero-eyebrow">PhD Candidate · Geospatial Data Science · Addis Ababa University</p>
+    <h1>Mapping Earth.<br/>Sustaining Agriculture.</h1>
     <p class="hero-tagline">
-      I use satellite imagery, machine learning, and Earth observation to understand how landscapes change — and what that means for agriculture, food security, and climate resilience in Africa.
+      Environmental Remote Sensing specialist with over 10 years of experience integrating satellite imagery, machine learning, and Earth observation to advance agricultural systems, food security, and natural resource management across Africa.
     </p>
     <div class="hero-badges">
       <span class="badge">Remote Sensing</span>
-      <span class="badge">Crop Mapping</span>
-      <span class="badge">GIS · ArcGIS · GEE</span>
-      <span class="badge">Machine Learning</span>
-      <span class="badge">Food Security</span>
+      <span class="badge">Google Earth Engine</span>
+      <span class="badge">Crop Mapping & Yield Estimation</span>
+      <span class="badge">Python · R · MATLAB</span>
+      <span class="badge">SAR · LiDAR · UAV</span>
+      <span class="badge">AI / ML / Deep Learning</span>
       <span class="badge">Capacity Building</span>
     </div>
     <div class="hero-links">
       <a href="#contact" class="btn btn-primary">Get in Touch</a>
       <a href="#publications" class="btn btn-outline">View Publications</a>
+      <a href="https://www.linkedin.com/in/mintesnot-birhanu-378061217/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
     </div>
   </div>
-
-  <!-- Coordinate card — signature element -->
   <div class="hero-coords">
-    <span class="coord-label">Research Location</span>
+    <span class="coord-label">Location</span>
     <span>Addis Ababa, Ethiopia</span>
     <span>&nbsp;</span>
     <span class="coord-label">Latitude</span>
@@ -603,15 +205,24 @@
     <span class="coord-label">Longitude</span>
     <span>38.7636° E</span>
     <span>&nbsp;</span>
-    <span class="coord-label">Focus Region</span>
-    <span>Sub-Saharan Africa</span>
-    <span class="coord-label">Domain</span>
-    <span>Agricultural EO</span>
+    <span class="coord-label">Institution</span>
+    <span>Addis Ababa University</span>
+    <span class="coord-label">Focus</span>
+    <span>Agricultural EO · Africa</span>
   </div>
 </div>
 
-<!-- STORY -->
+<!-- AWARD BANNER -->
+<div class="award-banner">
+  <div class="award-pill">
+    🏆 <span>AWARD</span> Best Paper — MedLIFE 2025, Naples, Italy · Paper No. 123
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
 <div class="container">
+
+  <!-- STORY -->
   <section id="story" class="section">
     <div class="section-header">
       <span class="section-label">Background</span>
@@ -619,13 +230,13 @@
     </div>
     <div class="story-text">
       <p>
-        Growing up in Africa, I saw firsthand how <strong>uncertain harvests ripple into uncertain futures</strong>. That observation became a question: can the view from space help us understand and protect the landscapes that feed us? Pursuing that question led me into geospatial science — a field that sits at the intersection of technology, environment, and human need.
+        Growing up in Ethiopia, I witnessed how <strong>fragile agricultural systems are when confronted with environmental change</strong>. That observation became a lifelong question: can the view from space help us understand, protect, and sustainably manage the landscapes that feed us?
       </p>
       <p>
-        Today, as a PhD researcher, I work with <strong>multi-temporal satellite imagery, machine learning models, and cloud-based Earth observation platforms</strong> to map cropland, estimate yields, and detect the fingerprints of climate change on agricultural landscapes. My tools span ArcGIS and Google Earth Engine to Python-based deep learning pipelines.
+        Over more than a decade, I have built expertise at the intersection of <strong>Earth observation, machine learning, and agricultural science</strong> — from lecturing GIS and remote sensing at Mettu and Wollega Universities, to leading research as a PhD candidate at Addis Ababa University's School of Earth Sciences. My doctoral work integrates multi-sensor satellite data (Sentinel-1 SAR, Sentinel-2, Landsat, LiDAR GEDI) with AI-driven pipelines to forecast crop yields and assess nutritional outcomes in smallholder farming landscapes.
       </p>
       <p>
-        But I am equally motivated by the work that happens <strong>after the analysis</strong>. Long-term, I am committed to knowledge transfer and capacity building across Africa — training the next generation of spatial scientists who can translate satellite data into decisions at the local level, where food security is won or lost.
+        Today I contribute to international research collaborations including the <strong>ViSTA initiative</strong> (multi-country crop mapping and yield analytics) and the <strong>CGIAR SPIA ADD-IN Ethiopia</strong> project on agricultural innovation adoption. I am equally committed to knowledge transfer — training the next generation of African spatial scientists who can turn satellite data into decisions that matter at the local level.
       </p>
     </div>
   </section>
@@ -638,63 +249,67 @@
     </div>
     <div class="skills-grid">
       <div class="skill-group">
-        <p class="skill-group-title">Earth Observation</p>
+        <p class="skill-group-title">Earth Observation & Remote Sensing</p>
         <ul class="skill-list">
-          <li>Multispectral &amp; SAR imagery</li>
-          <li>Vegetation index analysis (NDVI, EVI)</li>
-          <li>Time-series remote sensing</li>
-          <li>Land use / land cover mapping</li>
-          <li>Change detection</li>
+          <li>Sentinel-1 SAR, Sentinel-2, Landsat</li>
+          <li>SPOT, PLANET, LiDAR GEDI</li>
+          <li>UAV / Drone data processing</li>
+          <li>Time-series geospatial analysis</li>
+          <li>Flood, wetland & watershed mapping</li>
+          <li>Biomass & land cover modelling</li>
         </ul>
       </div>
       <div class="skill-group">
-        <p class="skill-group-title">GIS &amp; Spatial Analysis</p>
+        <p class="skill-group-title">GIS & Spatial Analysis</p>
         <ul class="skill-list">
-          <li>ArcGIS Pro / ArcMap 10.x</li>
+          <li>ArcGIS Pro, QGIS</li>
+          <li>ENVI, ERDAS IMAGINE, SNAP</li>
+          <li>CloudCompare</li>
+          <li>Geodesy, GNSS, LiDAR surveying</li>
+          <li>Raster & vector data management</li>
+          <li>Cartography & visualization</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Programming & Cloud Computing</p>
+        <ul class="skill-list">
+          <li>Python (NumPy, GDAL, rasterio, xarray, GeoPandas)</li>
+          <li>R, MATLAB</li>
           <li>Google Earth Engine (GEE)</li>
-          <li>QGIS</li>
-          <li>Watershed &amp; DEM analysis</li>
-          <li>Zonal statistics &amp; buffer analysis</li>
+          <li>Automation of spatial workflows</li>
+          <li>Cloud-based big data analytics</li>
         </ul>
       </div>
       <div class="skill-group">
-        <p class="skill-group-title">Machine Learning</p>
+        <p class="skill-group-title">AI & Machine Learning</p>
         <ul class="skill-list">
+          <li>Deep Learning (CNN, DL pipelines)</li>
           <li>Random Forest, SVM, XGBoost</li>
-          <li>CNNs for image classification</li>
-          <li>Crop mapping pipelines</li>
-          <li>Yield estimation models</li>
-          <li>Scikit-learn, TensorFlow, PyTorch</li>
+          <li>Crop mapping & yield estimation</li>
+          <li>Accuracy assessment & validation</li>
+          <li>Biomass & land cover modelling</li>
         </ul>
       </div>
       <div class="skill-group">
-        <p class="skill-group-title">Programming</p>
+        <p class="skill-group-title">Research & Communication</p>
         <ul class="skill-list">
-          <li>Python (primary)</li>
-          <li>Google Earth Engine JS API</li>
-          <li>R (statistical analysis)</li>
-          <li>SQL / GeoPandas</li>
-          <li>Git &amp; version control</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <p class="skill-group-title">Research &amp; Communication</p>
-        <ul class="skill-list">
-          <li>Academic writing &amp; publishing</li>
-          <li>Data visualization</li>
-          <li>Workshop facilitation</li>
-          <li>Training &amp; capacity building</li>
-          <li>Grant &amp; proposal writing</li>
+          <li>Peer-reviewed publications</li>
+          <li>Peer reviewer (Springer Nature)</li>
+          <li>Scientific writing & reporting</li>
+          <li>Grant & proposal development</li>
+          <li>Stakeholder training</li>
+          <li>Multicultural collaboration</li>
         </ul>
       </div>
       <div class="skill-group">
         <p class="skill-group-title">Domains</p>
         <ul class="skill-list">
-          <li>Agricultural landscapes</li>
-          <li>Food security</li>
-          <li>Climate change impacts</li>
-          <li>Sustainable agriculture</li>
-          <li>Watershed hydrology</li>
+          <li>Agricultural remote sensing</li>
+          <li>Hydrology & water resource management</li>
+          <li>Environmental monitoring</li>
+          <li>Food security & nutrition</li>
+          <li>Sustainable natural resource management</li>
+          <li>Digital agriculture</li>
         </ul>
       </div>
     </div>
@@ -707,57 +322,88 @@
       <h2>Experience</h2>
     </div>
     <div class="timeline">
+
       <div class="timeline-item">
-        <div class="tl-date">2022 — Present</div>
+        <div class="tl-date">Feb 2026 – Present</div>
         <div class="tl-dot"></div>
         <div>
-          <p class="tl-title">PhD Researcher – Geospatial Science</p>
-          <p class="tl-org">University / Research Institution, Ethiopia</p>
-          <p class="tl-desc">
-            Conducting doctoral research on satellite-based crop mapping and yield estimation across smallholder farming landscapes in Africa. Developing machine learning pipelines that integrate multi-temporal Sentinel and Landsat imagery to detect crop types, estimate productivity, and assess climate change impacts on agricultural output.
-          </p>
+          <p class="tl-title">Data & Geospatial Analytics Consultant</p>
+          <p class="tl-org">Re:sourced – ViSTA (Varietal Intelligence for Seed Targeting and Adoption) · Contract · Remote</p>
+          <div class="tl-desc">
+            Contributing to a multi-country research collaboration integrating genotypic data, crop-cut yield surveys, household datasets, and satellite-based remote sensing to improve crop yield estimation and varietal adoption analysis.
+            <ul>
+              <li>Developing and validating maize crop-mapping workflows using satellite imagery and ML</li>
+              <li>Integrating crop-cut surveys, satellite data, genotypic information, and environmental covariates for landscape-scale yield estimation</li>
+              <li>Assembling and documenting geospatial datasets for analytical workflows</li>
+              <li>Participating in international analytics sprint workshops and cross-disciplinary teams</li>
+            </ul>
+          </div>
           <div class="tl-tags">
-            <span class="tl-tag">GEE</span>
-            <span class="tl-tag">Crop Mapping</span>
-            <span class="tl-tag">ML Pipelines</span>
-            <span class="tl-tag">Sentinel-2</span>
-            <span class="tl-tag">Food Security</span>
+            <span class="tl-tag">Crop Mapping</span><span class="tl-tag">Yield Estimation</span><span class="tl-tag">ML Pipelines</span><span class="tl-tag">Remote Sensing</span><span class="tl-tag">Data Engineering</span>
           </div>
         </div>
       </div>
+
       <div class="timeline-item">
-        <div class="tl-date">2020 — 2022</div>
+        <div class="tl-date">Feb 2026 – Present</div>
         <div class="tl-dot"></div>
         <div>
-          <p class="tl-title">GIS &amp; Remote Sensing Analyst</p>
-          <p class="tl-org">Environmental / Government Agency, Ethiopia</p>
-          <p class="tl-desc">
-            Conducted land use and land cover change analysis for watershed management. Produced spatial data products supporting policy decisions on land degradation, reforestation, and sustainable resource use. Trained junior staff in ArcGIS and basic spatial analysis workflows.
-          </p>
+          <p class="tl-title">Private GIS & Geospatial Analytics Consultant</p>
+          <p class="tl-org">Lersha (Green Agro Solution PLC) · Part-time · Hybrid, Addis Ababa</p>
+          <div class="tl-desc">
+            Providing consultancy in GIS and geospatial analytics to support Lersha's digital agriculture platform, strengthening geospatial infrastructure, spatial data workflows, and integration of remote sensing technologies into operational and product development processes.
+          </div>
           <div class="tl-tags">
-            <span class="tl-tag">ArcGIS</span>
-            <span class="tl-tag">LULC</span>
-            <span class="tl-tag">Watershed Analysis</span>
-            <span class="tl-tag">Training</span>
+            <span class="tl-tag">GIS</span><span class="tl-tag">Digital Agriculture</span><span class="tl-tag">Remote Sensing</span><span class="tl-tag">Consulting</span>
           </div>
         </div>
       </div>
+
       <div class="timeline-item">
-        <div class="tl-date">2018 — 2020</div>
+        <div class="tl-date">Nov 2024 – Present</div>
         <div class="tl-dot"></div>
         <div>
-          <p class="tl-title">Research Assistant – Environmental Remote Sensing</p>
-          <p class="tl-org">Academic Laboratory, Ethiopia</p>
-          <p class="tl-desc">
-            Assisted in processing satellite imagery for vegetation monitoring and environmental baseline studies. Supported field data collection and GPS survey campaigns across agricultural and semi-arid landscapes.
-          </p>
+          <p class="tl-title">Doctoral Researcher – Geospatial Science & Remote Sensing</p>
+          <p class="tl-org">College of Natural and Computational Sciences, Addis Ababa University · Full-time</p>
+          <div class="tl-desc">
+            PhD research integrating satellite imagery, geospatial data science, and machine learning to analyze agricultural systems — crop monitoring, crop mapping, and yield estimation. Contributing to the ADD-IN Ethiopia project examining adoption and diffusion of agricultural innovations developed by the CGIAR system.
+          </div>
           <div class="tl-tags">
-            <span class="tl-tag">QGIS</span>
-            <span class="tl-tag">Field Surveys</span>
-            <span class="tl-tag">Vegetation Monitoring</span>
+            <span class="tl-tag">GEE</span><span class="tl-tag">Multi-sensor EO</span><span class="tl-tag">AI / ML</span><span class="tl-tag">UAV</span><span class="tl-tag">CGIAR SPIA</span>
           </div>
         </div>
       </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">2017 – Dec 2024</div>
+        <div class="tl-dot"></div>
+        <div>
+          <p class="tl-title">University Lecturer & Academic Dean</p>
+          <p class="tl-org">Mattu University · Full-time, Ethiopia</p>
+          <div class="tl-desc">
+            Led academic programs and research initiatives in geospatial science for 8 years. Lectured advanced GIS and remote sensing courses to 150+ students. Integrated AI and geospatial analytics into curriculum. Managed departmental research projects and industry collaborations. Conducted spatial data analysis using Python, GIS, and remote sensing for water and environmental studies.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">Lecturing</span><span class="tl-tag">Academic Leadership</span><span class="tl-tag">Research</span><span class="tl-tag">Curriculum Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">2014 – 2016</div>
+        <div class="tl-dot"></div>
+        <div>
+          <p class="tl-title">Lecturer – GIS & Remote Sensing</p>
+          <p class="tl-org">Wollega University · Ethiopia</p>
+          <div class="tl-desc">
+            Delivered practical training in GIS, remote sensing, and spatial data processing. Supported applied research projects involving satellite imagery and environmental data. Assisted in geospatial data processing, mapping, and reporting.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">GIS Lab</span><span class="tl-tag">Field Surveys</span><span class="tl-tag">Environmental Data</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -769,36 +415,33 @@
     </div>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="tl-date">2022 — Present</div>
+        <div class="tl-date">Nov 2024 – Present</div>
         <div class="tl-dot"></div>
         <div>
-          <p class="tl-title">PhD, Geospatial Science</p>
-          <p class="tl-org">University, Ethiopia</p>
-          <p class="tl-desc">
-            Dissertation focus: Machine learning approaches for satellite-based crop mapping, yield estimation, and climate change impact assessment in Sub-Saharan African agricultural systems.
-          </p>
+          <p class="tl-title">PhD in Geospatial Science (Remote Sensing & Geoinformatics)</p>
+          <p class="tl-org">Addis Ababa University, School of Earth Sciences</p>
+          <div class="tl-desc">
+            <strong>Thesis:</strong> Multi-Sensor Remote Sensing for Yield Forecasting and Nutritional Assessment in Smallholder Agricultural Landscapes of Ethiopia.<br/>
+            Key Technologies: Python, Google Earth Engine, UAV, AI (ML and DL)
+          </div>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="tl-date">2016 — 2018</div>
+        <div class="tl-date">Nov 2017 – Jul 2019</div>
         <div class="tl-dot"></div>
         <div>
-          <p class="tl-title">MSc, Remote Sensing &amp; GIS</p>
-          <p class="tl-org">University, Ethiopia</p>
-          <p class="tl-desc">
-            Graduated with distinction. Thesis on land use / land cover dynamics in Ethiopian highland watersheds using multi-temporal Landsat imagery.
-          </p>
+          <p class="tl-title">MSc in Remote Sensing & Geoinformatics</p>
+          <p class="tl-org">Addis Ababa University</p>
+          <div class="tl-desc">Graduated with <strong>Great Distinction</strong> and Excellent Thesis Performance.</div>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="tl-date">2012 — 2016</div>
+        <div class="tl-date">Nov 2011 – Jul 2014</div>
         <div class="tl-dot"></div>
         <div>
-          <p class="tl-title">BSc, Natural Resource Management</p>
-          <p class="tl-org">University, Ethiopia</p>
-          <p class="tl-desc">
-            Foundations in ecology, soil science, hydrology, and spatial analysis. Final-year project on watershed degradation mapping.
-          </p>
+          <p class="tl-title">BSc in Geographic Information Systems (GIS)</p>
+          <p class="tl-org">Hawassa University, Wondo Genet College of Forestry and Natural Resources</p>
+          <div class="tl-desc">Graduated with <strong>Distinction</strong>.</div>
         </div>
       </div>
     </div>
@@ -810,31 +453,51 @@
       <span class="section-label">Research Output</span>
       <h2>Publications</h2>
     </div>
+
+    <!-- Award -->
+    <div class="award-item">
+      <p class="award-title">🏆 Muna MedLife Award for Best Paper — Mediterranean Life Science Union Annual Meeting (MedLIFE-25)</p>
+      <p class="award-meta">Naples, Italy · 1–11 December 2025 · Paper No. 123</p>
+    </div>
+
     <div class="pub-list">
       <div class="pub-item">
-        <p class="pub-title">Satellite-Based Crop Type Mapping in Smallholder Systems: A Machine Learning Approach Using Sentinel-2 Time Series</p>
-        <p class="pub-meta">Minte et al. · Remote Sensing of Environment · 2024</p>
-        <p class="pub-abstract">
-          A Random Forest classification framework applied to dense multi-temporal Sentinel-2 stacks to map seven dominant crop types across heterogeneous smallholder landscapes in Ethiopia, achieving an overall accuracy of 87.4%.
-        </p>
-        <a href="#" class="pub-link">→ View Paper</a>
+        <p class="pub-title">Integrating Satellite and Strategic Ground-Based Monitoring for Flood Risk Assessment and to Support Public Health Mitigation Measures in Resource-Limited, Data-Scarce Settings</p>
+        <p class="pub-meta">Berhanu, M., & Perilli, N. · MedLife Conference 2025, Naples, Italy · Presented 2025</p>
+        <p class="pub-abstract">Conference paper integrating satellite-based flood monitoring with ground survey data to support public health decision-making in low-resource environments. Awarded Best Paper at the MedLIFE-25 Annual Meeting.</p>
+        <a href="https://2025.program.med-life.org/#/program" target="_blank" rel="noopener" class="pub-link">→ Conference Program</a>
       </div>
       <div class="pub-item">
-        <p class="pub-title">Assessing Climate Change Impacts on Crop Yield Using Earth Observation and Statistical Downscaling in the Ethiopian Highlands</p>
-        <p class="pub-meta">Minte et al. · Agricultural and Forest Meteorology · 2023</p>
-        <p class="pub-abstract">
-          Integration of ERA5 reanalysis climate data with MODIS-derived NDVI phenology to model historical yield variability and project future productivity under RCP4.5 and RCP8.5 scenarios.
-        </p>
-        <a href="#" class="pub-link">→ View Paper</a>
+        <p class="pub-title">Rainfall Anomalies During the Dry Season and Their Impact on Rainfed Crop Yields in Ethiopia</p>
+        <p class="pub-meta">Tamsgen, A., Berhanu, M., et al. · Journal of Hydrology: Regional Studies · Submitted 2025 (MS: EJRH-D-25-03363)</p>
+        <p class="pub-abstract">Analysis of dry-season rainfall anomalies and their downstream effects on rainfed crop productivity across Ethiopian agricultural zones, combining satellite-derived precipitation products with yield statistics.</p>
       </div>
       <div class="pub-item">
-        <p class="pub-title">Land Use / Land Cover Dynamics in the Kebena Watershed: A Multi-Decadal Remote Sensing Analysis</p>
-        <p class="pub-meta">Minte, co-authors · Land Degradation &amp; Development · 2022</p>
-        <p class="pub-abstract">
-          Quantified LULC transitions from 1990–2020 in the Kebena watershed using Landsat time series, revealing a 34% decline in natural vegetation cover and its hydrological implications for downstream communities.
-        </p>
-        <a href="#" class="pub-link">→ View Paper</a>
+        <p class="pub-title">Wetland Mapping and Evaluating the Impacts on Hydrology Using Geospatial Techniques: A Case of Geba Watershed, Southwest Ethiopia</p>
+        <p class="pub-meta">Berhanu, M., Suryabhagavan, K.V., & Korme, T. · Geology, Ecology, and Landscapes · 2021</p>
+        <p class="pub-abstract">Geospatial analysis of wetland extent and hydrological impacts in the Geba Watershed, Southwest Ethiopia, using multi-temporal satellite imagery and GIS-based spatial modelling.</p>
+        <a href="https://www.tandfonline.com/doi/full/10.1080/24749508.2021.1953744" target="_blank" rel="noopener" class="pub-link">→ View Paper</a>
       </div>
+      <div class="pub-item">
+        <p class="pub-title">African Civet Habitat Mapping in Illubabor Zone, Southwest Ethiopia: A Geospatial Approach</p>
+        <p class="pub-meta">Suryabhagavan, K.V., Berhanu, M., et al. · Remote Sensing of Land, 5(1) · 2021</p>
+        <p class="pub-abstract">Species habitat suitability mapping for the African Civet using satellite-derived environmental covariates and geospatial modelling approaches across Southwest Ethiopia.</p>
+        <a href="https://www.researchgate.net/publication/345154539" target="_blank" rel="noopener" class="pub-link">→ View Paper</a>
+      </div>
+      <div class="pub-item">
+        <p class="pub-title">Mapping and Estimating Aboveground Biomass Using Random Forest Algorithm: A Case of Yayo Bioreserve Forest, Southwestern Ethiopia</p>
+        <p class="pub-meta">Berhanu, M. · Submitted</p>
+        <p class="pub-abstract">Machine learning-based biomass estimation integrating multi-temporal satellite imagery with field inventory data across the Yayo Biosphere Reserve in Southwest Ethiopia.</p>
+      </div>
+    </div>
+
+    <!-- Academic service -->
+    <div style="margin-top:2rem;">
+      <p style="font-family:var(--mono);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.8rem;">Peer Review Service</p>
+      <p style="font-size:0.88rem;color:var(--ink-muted);line-height:1.7;">
+        Peer Reviewer, <strong>Euro-Mediterranean Journal for Environmental Integration</strong> (Springer Nature), 2024–Present.<br/>
+        Springer Nature Review Certificate — Discover Forest, 13 December 2025.
+      </p>
     </div>
   </section>
 
@@ -846,78 +509,40 @@
     </div>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="project-icon">🛰️</div>
-        <p class="project-title">Kebena Watershed Analysis</p>
-        <p class="project-desc">
-          Sub-watershed delineation, 500m–2000m buffer zones, and zonal statistics for mean elevation and rainfall using ArcMap 10.8 and a high-resolution Akaki DEM.
-        </p>
-        <div class="project-tools">
-          <span class="project-tool">ArcMap 10.8</span>
-          <span class="project-tool">DEM</span>
-          <span class="project-tool">Zonal Stats</span>
-        </div>
-      </div>
-      <div class="project-card">
         <div class="project-icon">🌾</div>
-        <p class="project-title">Ethiopia Crop Mapping Pipeline</p>
-        <p class="project-desc">
-          End-to-end GEE + Python pipeline for annual crop type classification across the Ethiopian highlands using Sentinel-2 time series and Random Forest.
-        </p>
-        <div class="project-tools">
-          <span class="project-tool">GEE</span>
-          <span class="project-tool">Python</span>
-          <span class="project-tool">Random Forest</span>
-          <span class="project-tool">Sentinel-2</span>
-        </div>
+        <p class="project-title">ViSTA Crop Mapping Pipeline</p>
+        <p class="project-desc">Multi-country maize crop-mapping workflows integrating satellite imagery, crop-cut surveys, genotypic data, and ML for varietal adoption and yield analytics across African smallholder systems.</p>
+        <div class="project-tools"><span class="project-tool">Sentinel-2</span><span class="project-tool">GEE</span><span class="project-tool">Python</span><span class="project-tool">ML</span></div>
       </div>
       <div class="project-card">
-        <div class="project-icon">📈</div>
-        <p class="project-title">Yield Estimation Model</p>
-        <p class="project-desc">
-          Machine learning model linking satellite-derived vegetation indices with ground-truth yield records to estimate smallholder productivity at field scale.
-        </p>
-        <div class="project-tools">
-          <span class="project-tool">XGBoost</span>
-          <span class="project-tool">NDVI</span>
-          <span class="project-tool">MODIS</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🌍</div>
-        <p class="project-title">GEE Capacity Building Workshops</p>
-        <p class="project-desc">
-          Designed and delivered training workshops for researchers and government analysts across Ethiopia on Google Earth Engine and satellite data processing fundamentals.
-        </p>
-        <div class="project-tools">
-          <span class="project-tool">GEE</span>
-          <span class="project-tool">Training</span>
-          <span class="project-tool">Capacity Building</span>
-        </div>
+        <div class="project-icon">📊</div>
+        <p class="project-title">ADD-IN Ethiopia – CGIAR SPIA</p>
+        <p class="project-desc">PhD-linked project examining adoption and diffusion of CGIAR agricultural innovations using nationally representative datasets and advanced geospatial analytics. SPIA Add-In Ethiopia Project Winner (AAU).</p>
+        <div class="project-tools"><span class="project-tool">CGIAR</span><span class="project-tool">Household Data</span><span class="project-tool">GIS</span><span class="project-tool">R</span></div>
       </div>
       <div class="project-card">
         <div class="project-icon">💧</div>
-        <p class="project-title">Watershed Hydrological Assessment</p>
-        <p class="project-desc">
-          Spatial analysis of runoff potential and soil erosion risk in degraded highland watersheds using DEM-derived morphometric parameters and RUSLE.
-        </p>
-        <div class="project-tools">
-          <span class="project-tool">ArcGIS</span>
-          <span class="project-tool">DEM</span>
-          <span class="project-tool">RUSLE</span>
-          <span class="project-tool">Hydrology</span>
-        </div>
+        <p class="project-title">Flood & Wetland Mapping – Ethiopia</p>
+        <p class="project-desc">Flood risk and wetland extent mapping using Sentinel-1 SAR and GIS across Ethiopian watersheds. Includes hydrological impact assessment of wetland degradation in the Geba Watershed.</p>
+        <div class="project-tools"><span class="project-tool">Sentinel-1 SAR</span><span class="project-tool">GIS</span><span class="project-tool">Hydrology</span></div>
       </div>
       <div class="project-card">
-        <div class="project-icon">☁️</div>
-        <p class="project-title">Climate Change Impact Dashboard</p>
-        <p class="project-desc">
-          Interactive data visualization of historical temperature and precipitation trends overlaid with crop productivity indices across Ethiopian agricultural zones.
-        </p>
-        <div class="project-tools">
-          <span class="project-tool">Python</span>
-          <span class="project-tool">ERA5</span>
-          <span class="project-tool">Matplotlib</span>
-        </div>
+        <div class="project-icon">🌳</div>
+        <p class="project-title">Aboveground Biomass Estimation</p>
+        <p class="project-desc">Random Forest-based biomass estimation integrating multi-temporal satellite data with field inventory across the Yayo Biosphere Reserve, Southwestern Ethiopia.</p>
+        <div class="project-tools"><span class="project-tool">Random Forest</span><span class="project-tool">LiDAR GEDI</span><span class="project-tool">Landsat</span><span class="project-tool">Python</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🛰️</div>
+        <p class="project-title">Yield Forecasting – Smallholder Landscapes</p>
+        <p class="project-desc">PhD core research: multi-sensor remote sensing for crop yield forecasting and nutritional assessment in Ethiopian smallholder agricultural landscapes using deep learning pipelines.</p>
+        <div class="project-tools"><span class="project-tool">Sentinel-2</span><span class="project-tool">UAV</span><span class="project-tool">Deep Learning</span><span class="project-tool">GEE</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🐾</div>
+        <p class="project-title">African Civet Habitat Mapping</p>
+        <p class="project-desc">Species distribution and habitat suitability modelling for the African Civet in Illubabor Zone using satellite-derived environmental layers and geospatial ML approaches.</p>
+        <div class="project-tools"><span class="project-tool">MaxEnt</span><span class="project-tool">GIS</span><span class="project-tool">SPOT</span><span class="project-tool">Landsat</span></div>
       </div>
     </div>
   </section>
@@ -931,34 +556,46 @@
     <div class="contact-layout">
       <div>
         <p class="contact-intro">
-          I am open to research collaborations, capacity building partnerships, speaking invitations, and opportunities related to Earth observation, food systems, and sustainable development in Africa.
+          Open to research collaborations, international partnerships, capacity building, peer review, conference presentations, and consulting in Earth observation, digital agriculture, and sustainable development across Africa.
         </p>
         <div class="contact-links">
-          <a href="mailto:minte@example.com" class="contact-link">
-            <span class="contact-link-icon">EMAIL</span>
-            minte@example.com
+          <a href="mailto:minteb11@gmail.com" class="contact-link">
+            <span class="contact-link-icon">EMAIL</span>minteb11@gmail.com
           </a>
-          <a href="https://linkedin.com/in/minte" class="contact-link" target="_blank" rel="noopener">
-            <span class="contact-link-icon">LINKEDIN</span>
-            linkedin.com/in/minte
+          <a href="mailto:mintesnot.gsr-1905-17@aau.edu.et" class="contact-link">
+            <span class="contact-link-icon">AAU</span>mintesnot.gsr-1905-17@aau.edu.et
           </a>
-          <a href="https://github.com/minte" class="contact-link" target="_blank" rel="noopener">
-            <span class="contact-link-icon">GITHUB</span>
-            github.com/minte
+          <a href="tel:+251912686311" class="contact-link">
+            <span class="contact-link-icon">PHONE</span>+251 912 686 311
           </a>
-          <a href="https://scholar.google.com" class="contact-link" target="_blank" rel="noopener">
-            <span class="contact-link-icon">SCHOLAR</span>
-            Google Scholar
+          <a href="https://www.linkedin.com/in/mintesnot-birhanu-378061217/" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-icon">LINKEDIN</span>mintesnot-birhanu-378061217
           </a>
-          <a href="https://orcid.org" class="contact-link" target="_blank" rel="noopener">
-            <span class="contact-link-icon">ORCID</span>
-            0000-0000-0000-0000
+          <a href="https://www.editorialmanager.com/emje/default.aspx" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-icon">REVIEWER</span>Springer Nature – EMJE
           </a>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <p style="font-family:var(--mono);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.8rem;">Languages</p>
+          <div class="membership-list">
+            <div class="membership-item">English — Professional</div>
+            <div class="membership-item">Amharic — Native</div>
+            <div class="membership-item">Afan Oromo — Professional</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <p style="font-family:var(--mono);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.8rem;">Professional Memberships</p>
+          <div class="membership-list">
+            <div class="membership-item">International Society for Photogrammetry and Remote Sensing (ISPRS)</div>
+            <div class="membership-item">Ethiopian Society of Geographical Information Systems</div>
+          </div>
         </div>
       </div>
 
       <div>
-        <div class="contact-form" id="contactForm">
+        <div class="contact-form">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Your name" />
@@ -969,7 +606,7 @@
           </div>
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Collaboration, inquiry, etc." />
+            <input type="text" id="subject" placeholder="Collaboration, consulting, speaking, etc." />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
@@ -981,12 +618,13 @@
       </div>
     </div>
   </section>
-</div>
+
+</div><!-- /container -->
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Minte · Geospatial Scientist · Addis Ababa, Ethiopia</p>
-  <p>Built with HTML · Deployed via GitHub Pages</p>
+  <p>© 2026 Mintesnot Berhanu Tilahun · Geospatial Data Scientist · Addis Ababa, Ethiopia</p>
+  <p>PhD Candidate · Addis Ababa University</p>
 </footer>
 
 <script>
@@ -995,22 +633,19 @@
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
     const note = document.getElementById('formNote');
-
     if (!name || !email || !message) {
       note.style.color = '#b5601a';
       note.textContent = 'Please fill in your name, email, and message.';
       return;
     }
-
     note.style.color = '#2b5741';
-    note.textContent = '✓ Message received — I will get back to you soon.';
+    note.textContent = '✓ Message received — Mintesnot will get back to you soon.';
     document.getElementById('name').value = '';
     document.getElementById('email').value = '';
     document.getElementById('subject').value = '';
     document.getElementById('message').value = '';
   }
 
-  // Subtle scroll-reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -1018,7 +653,7 @@
         e.target.style.transform = 'translateY(0)';
       }
     });
-  }, { threshold: 0.08 });
+  }, { threshold: 0.06 });
 
   document.querySelectorAll('.section').forEach(el => {
     el.style.opacity = '0';
@@ -1027,6 +662,5 @@
     observer.observe(el);
   });
 </script>
-
 </body>
 </html>
