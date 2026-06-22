@@ -278,6 +278,25 @@ footer{background:var(--txt);padding:2rem 2rem}
   .ggrid{grid-template-columns:1fr 1fr}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* CONSULTANCY */
+#consultancy{background:linear-gradient(135deg,#0a1f0f 0%,#0d2b15 60%,#0e3218 100%)}
+#consultancy .slabel{color:#6ab87a}
+#consultancy .slabel::before{background:#6ab87a}
+#consultancy .stitle{color:#f0faf3}
+#consultancy .stitle em{color:#6ab87a}
+#consultancy .ssub{color:rgba(240,250,243,.65)}
+.con-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.5rem}
+.con-card{background:rgba(255,255,255,.055);border:1px solid rgba(106,184,122,.18);border-radius:var(--r-lg);padding:1.8rem;position:relative;overflow:hidden;transition:var(--t)}
+.con-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#4caf70,#2e7d52)}
+.con-card:hover{background:rgba(255,255,255,.08);border-color:rgba(106,184,122,.35);transform:translateY(-3px)}
+.con-badge{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--fm);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#6ab87a;background:rgba(106,184,122,.12);border:1px solid rgba(106,184,122,.22);padding:.22rem .7rem;border-radius:100px;margin-bottom:1rem}
+.con-role{font-family:var(--fd);font-size:1.05rem;font-weight:800;color:#f0faf3;margin-bottom:.25rem}
+.con-org{font-size:.84rem;color:#6ab87a;font-weight:600;margin-bottom:.2rem}
+.con-period{font-family:var(--fm);font-size:.72rem;color:rgba(240,250,243,.45);margin-bottom:.9rem}
+.con-desc{font-size:.84rem;color:rgba(240,250,243,.7);line-height:1.75}
+.con-tags{display:flex;flex-wrap:wrap;gap:.32rem;margin-top:1rem}
+.con-tag{font-size:.69rem;background:rgba(106,184,122,.1);color:#6ab87a;border:1px solid rgba(106,184,122,.2);padding:.14rem .52rem;border-radius:var(--r-sm);font-weight:500}
 </style>
 </head>
 <body>
@@ -287,6 +306,7 @@ footer{background:var(--txt);padding:2rem 2rem}
   <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#consultancy">Consultancy</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#publications">Publications</a></li>
@@ -353,7 +373,7 @@ footer{background:var(--txt);padding:2rem 2rem}
 <section id="about">
   <div class="si">
     <div class="slabel">About</div>
-    <h2 class="stitle">Mapping Earth. <em>Sustaining Africa.</em></h2>
+    <h2 class="stitle">Earth Observation <em>for Africa's Future</em></h2>
     <div class="about-grid reveal">
       <div class="about-text">
         <p>I am a PhD candidate in Geospatial Science at Addis Ababa University's School of Earth Sciences, with over 10 years of expertise in satellite remote sensing, GIS analysis, and machine learning applied to agricultural and environmental systems across Ethiopia and Africa.</p>
@@ -380,13 +400,13 @@ footer{background:var(--txt);padding:2rem 2rem}
 <section id="experience">
   <div class="si">
     <div class="slabel">Experience</div>
-    <h2 class="stitle">Research &amp; <em>Professional Journey</em></h2>
+    <h2 class="stitle">Research &amp; <em>Academic Roles</em></h2>
     <p class="ssub">A decade of applied geospatial science across academia, government, and international research organizations.</p>
     <div class="tl reveal">
       <div class="tli"><div class="tl-dot"></div><div class="tl-card">
         <div class="tl-head"><div class="tl-role">PhD Researcher — Geospatial Science</div><div class="tl-period">2021 – Present</div></div>
         <div class="tl-org">Addis Ababa University · School of Earth Sciences</div>
-        <div class="tl-desc">Dissertation on multi-temporal remote sensing and machine learning for smallholder crop type mapping and food security assessment across Ethiopia. Supervised by Dr. Binyam Tesfaw Hailu (Associate Professor of Geoinformatics specializing in multidisciplinary remote sensing applications, including natural resources management, environmental monitoring, and geological mapping) at Addis Ababa University (AAU) at Addis Ababa University (AAU) in collaboration with University of Twente (ITC), Dr. Michael Marshall (Associate Professor specializing in crop carbon and water exchange) in the Department of Earth Observation Science (EOS) at the Faculty ITC, University of Twente.) and Dr. Mariana Belgiu (Associate Professor in Remote sensing and Machine Learning for environmental sciences) in the Department of Earth Observation Science (EOS) at the Faculty ITC, University of Twente.</div>
+        <div class="tl-desc">Dissertation on multi-temporal remote sensing and machine learning for smallholder crop type mapping and food security assessment across Ethiopia. Supervised by Dr. Binyam Tesfaw Hailu (AAU) in collaboration with Dr. Michael Marshall and Dr. Mariana Belgiu — both Associate Professors in Earth Observation Science at ITC, University of Twente.</div>
         <div class="tl-tags"><span class="tl-tag">Remote Sensing</span><span class="tl-tag">GEE</span><span class="tl-tag">ML</span><span class="tl-tag">Crop Mapping</span></div>
       </div></div>
       <div class="tli"><div class="tl-dot"></div><div class="tl-card">
@@ -395,12 +415,7 @@ footer{background:var(--txt);padding:2rem 2rem}
         <div class="tl-desc">Founded and lead a professional geospatial training and consulting platform delivering capacity-building in remote sensing, GIS, Google Earth Engine, LiDAR, and spatial data science to students, researchers, and professionals across East Africa. Training fees: 1,000–1,500 ETB per session.</div>
         <div class="tl-tags"><span class="tl-tag">Training</span><span class="tl-tag">Consulting</span><span class="tl-tag">GeoAI</span><span class="tl-tag">Capacity Building</span></div>
       </div></div>
-      <div class="tli"><div class="tl-dot"></div><div class="tl-card">
-        <div class="tl-head"><div class="tl-role">Research Contributor — ViSTA Data Sprint 2026</div><div class="tl-period">2025 – 2026</div></div>
-        <div class="tl-org"> ViSTA Initiative (Resourced) · EIAR · AAU</div>
-        <div class="tl-desc">Contributed geospatial analytics to the ViSTA Ethiopia Data Sprint 2026 — integrating Sentinel-2 EO data with national agricultural survey datasets to support EO-based maize yield estimation modeling. Achieved 80.4% classification accuracy using machine learning workflows on the OlmoEarth platform.</div>
-        <div class="tl-tags"><span class="tl-tag">EO Yield Estimation</span><span class="tl-tag">Sentinel-2</span><span class="tl-tag">CGIAR</span><span class="tl-tag">ViSTA</span></div>
-      </div></div>
+
       <div class="tli"><div class="tl-dot"></div><div class="tl-card">
         <div class="tl-head"><div class="tl-role">IPORA SAEAP 2026 — Presenter</div><div class="tl-period">2026</div></div>
         <div class="tl-org">Addis Ababa University · University of Bordeaux · IRD · Sciences Po</div>
@@ -417,11 +432,55 @@ footer{background:var(--txt);padding:2rem 2rem}
   </div>
 </section>
 
+<!-- CONSULTANCY -->
+<section id="consultancy">
+  <div class="si">
+    <div class="slabel">Consultancy</div>
+    <h2 class="stitle">Consulting Services — <em>National &amp; International</em></h2>
+    <p class="ssub">Providing independent geospatial and data analytics consultancy to international research initiatives, development-focused NGOs, and private agri-tech companies across Africa.</p>
+    <div class="con-grid reveal">
+
+      <div class="con-card">
+        <div class="con-badge">🌍 International · Remote</div>
+        <div class="con-role">Data &amp; Geospatial Analytics Consultant</div>
+        <div class="con-org">Re:sourced — ViSTA Initiative (Varietal Intelligence for Seed Targeting &amp; Adoption)</div>
+        <div class="con-period">Feb 2026 – Present · Contract</div>
+        <div class="con-desc">Contributing to a multi-country research collaboration integrating genotypic data, crop-cut yield surveys, household datasets, and satellite-based remote sensing to improve crop yield estimation and varietal adoption analysis. Developing advanced analytical pipelines, crop mapping workflows, and integrated geospatial datasets that support evidence-based decision-making for agricultural policy and breeding programs.
+          <br><br>Key contributions include: developing and validating maize crop-mapping workflows (Sentinel-2 + ML, 80.4% accuracy); integrating crop-cut surveys, satellite imagery, genotypic, and socio-economic datasets for landscape-scale yield estimation; evaluating outputs in the context of Ethiopian agro-ecological systems; and participating in international analytics sprint workshops with cross-disciplinary technical teams.</div>
+        <div class="con-tags">
+          <span class="con-tag">Crop Mapping</span>
+          <span class="con-tag">Yield Estimation</span>
+          <span class="con-tag">Remote Sensing</span>
+          <span class="con-tag">ML Modeling</span>
+          <span class="con-tag">CGIAR / ViSTA</span>
+          <span class="con-tag">Data Engineering</span>
+        </div>
+      </div>
+
+      <div class="con-card">
+        <div class="con-badge">🇪🇹 Addis Ababa · Hybrid</div>
+        <div class="con-role">Private GIS &amp; Geospatial Analytics Consultant</div>
+        <div class="con-org">Lersha (Green Agro Solution PLC) — Digital Agriculture Platform</div>
+        <div class="con-period">Feb 2026 – Present · Part-time</div>
+        <div class="con-desc">Providing consultancy in Geographic Information Systems and geospatial analytics to support Lersha's digital agriculture platform. The role focuses on strengthening geospatial infrastructure, spatial data workflows, and the integration of remote sensing technologies into operational and product development processes — directly supporting evidence-driven agricultural interventions across Ethiopia.</div>
+        <div class="con-tags">
+          <span class="con-tag">GIS Infrastructure</span>
+          <span class="con-tag">Digital Agriculture</span>
+          <span class="con-tag">Spatial Workflows</span>
+          <span class="con-tag">Remote Sensing Integration</span>
+          <span class="con-tag">Product Development</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- EDUCATION -->
 <section id="education">
   <div class="si">
     <div class="slabel">Education</div>
-    <h2 class="stitle">Academic <em>Background</em></h2>
+    <h2 class="stitle">Academic <em>Foundations</em></h2>
     <p class="ssub">Trained in geospatial science and earth observation with a strong interdisciplinary foundation across remote sensing, GIS, and environmental science.</p>
     <div class="edu-grid reveal">
       <div class="edu-card"><div class="edu-deg">Doctor of Philosophy (PhD)</div><div class="edu-field">Geospatial Science</div><div class="edu-inst">Addis Ababa University — School of Earth Sciences</div><div class="edu-yr">Nov 2024 – Present</div><div class="edu-det">Dissertation: Multi-temporal crop type mapping using machine learning and satellite imagery. Co-supervised with University of Twente (ITC).</div></div>
