@@ -1,0 +1,11 @@
+LERSHA data build  2026-09-24 17:20
+List rows read: 75
+Boundaries: 15 regions, 107 zones, 1148 woredas
+Rows not matched exactly:
+  [spelling match, zone corrected] Central Ethiopia / Hadiya / Doyo gena
+  [spelling match, zone corrected] Amhara / North Shewa (OR) / Moratina Jiru
+Duplicate rows removed: 1
+  duplicate: Oromia / South West Shewa / Goro (SW Shewa)
+Confirmed LERSHA woredas on map: 74 in 20 zones, 6 regions
+Not matched: 0  |  Waiting for review (master list): 10
+data/lersha_data.js size: 2.43 MB

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where Lersha works · A2F reach map of Ethiopia</title>
+<meta name="description" content="Interactive map of Lersha (Green Agro Solution PLC) Access to Finance coverage across Ethiopian regions, zones and woredas.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!--LERSHA:STYLES-->
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/css/dashboard.css">
+<!--/LERSHA:STYLES-->
+</head>
+<body>
+<div class="app" id="app">
+
+  <header class="topbar" id="topbar">
+    <a class="brand" id="brandLink" href="#" aria-label="Lersha home">
+      <span class="brand-mark" id="brandMark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="32" height="32"><path d="M16 29c0-9 3-16 11-22-1 9-4 16-11 22Z" fill="currentColor"/><path d="M16 29C16 20 13 13 5 7c1 9 4 16 11 22Z" fill="currentColor" opacity=".55"/></svg>
+      </span>
+      <span class="brand-text">
+        <strong id="brandName">Lersha</strong>
+        <small id="brandLegal">Green Agro Solution PLC</small>
+      </span>
+    </a>
+    <p class="program" id="programLabel">Access to Finance (A2F)</p>
+    <div class="top-actions">
+      <button class="btn ghost" id="shareBtn" type="button" title="Copy a link to this exact view">Copy link</button>
+      <div class="menu">
+        <button class="btn" id="downloadBtn" type="button" aria-haspopup="true" aria-expanded="false">Download data</button>
+        <div class="menu-list" id="downloadMenu" role="menu" hidden>
+          <button role="menuitem" data-dl="csv" type="button">Woreda list (CSV)</button>
+          <button role="menuitem" data-dl="geojson" type="button">Woreda boundaries (GeoJSON)</button>
+          <button role="menuitem" data-dl="summary" type="button">Summary by zone (CSV)</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="headline" aria-live="polite">
+    <nav class="crumbs" id="crumbs" aria-label="Current selection"></nav>
+    <h1 id="headline">Lersha reaches woredas across Ethiopia.</h1>
+  </section>
+
+  <section class="filters" aria-label="Filters">
+    <label class="field">
+      <span>Region</span>
+      <select id="fRegion"><option value="">All regions</option></select>
+    </label>
+    <label class="field">
+      <span>Zone</span>
+      <select id="fZone"><option value="">All zones</option></select>
+    </label>
+    <label class="field">
+      <span>Woreda</span>
+      <select id="fWoreda"><option value="">All woredas</option></select>
+    </label>
+    <label class="field grow">
+      <span>Find a woreda</span>
+      <input id="search" type="search" list="searchList" placeholder="Type a name, e.g. Kofele" autocomplete="off">
+      <datalist id="searchList"></datalist>
+    </label>
+    <button class="btn ghost" id="resetBtn" type="button">Show all Ethiopia</button>
+  </section>
+
+  <main class="stage">
+    <section class="map-wrap" aria-label="Map">
+      <div id="map" role="application" aria-label="Map of Lersha woredas"></div>
+      <div class="map-tools">
+        <div class="seg" role="group" aria-label="Shade the map by">
+          <button type="button" data-level="woreda" class="on">Woredas</button>
+          <button type="button" data-level="zone">Zones</button>
+          <button type="button" data-level="region">Regions</button>
+        </div>
+        <div class="seg" id="basemapSeg" role="group" aria-label="Map background">
+          <button type="button" data-bm="none">Plain</button>
+          <button type="button" data-bm="light">Streets</button>
+          <button type="button" data-bm="satellite">Satellite</button>
+        </div>
+      </div>
+      <div class="legend" id="legend"></div>
+      <button class="btn fit" id="fitBtn" type="button" title="Zoom to the current selection">Zoom to selection</button>
+    </section>
+
+    <aside class="rail" aria-label="Summary">
+      <dl class="stats" id="stats"></dl>
+      <div class="insight">
+        <h2>What this shows</h2>
+        <div id="insight"></div>
+      </div>
+      <div class="rail-chart">
+        <h2 id="rankTitle">Woredas reached by region</h2>
+        <div id="rankChart" class="chart"></div>
+        <p class="hint">Click a bar to zoom in.</p>
+      </div>
+    </aside>
+  </main>
+
+  <section class="analysis">
+    <div class="tabs" role="tablist" aria-label="Analysis views">
+      <button role="tab" aria-selected="true" data-tab="share" type="button">Share of woredas reached</button>
+      <button role="tab" aria-selected="false" data-tab="tree" type="button">Region → zone → woreda</button>
+      <button role="tab" aria-selected="false" data-tab="area" type="button">Land area covered</button>
+      <button role="tab" aria-selected="false" data-tab="table" type="button">Woreda list</button>
+      <button role="tab" aria-selected="false" data-tab="notes" type="button">Data notes</button>
+    </div>
+
+    <div class="tab-panel" data-panel="share" role="tabpanel">
+      <p class="panel-intro" id="shareIntro">How many of each area's woredas Lersha works in.</p>
+      <div id="shareChart" class="chart tall"></div>
+    </div>
+    <div class="tab-panel" data-panel="tree" role="tabpanel" hidden>
+      <p class="panel-intro">Each ring is one level down. Click a slice to filter the whole page.</p>
+      <div id="sunChart" class="chart tall"></div>
+    </div>
+    <div class="tab-panel" data-panel="area" role="tabpanel" hidden>
+      <p class="panel-intro">Box size is the land area of each woreda (km²), grouped by region and zone.</p>
+      <div id="areaChart" class="chart tall"></div>
+    </div>
+    <div class="tab-panel" data-panel="table" role="tabpanel" hidden>
+      <div class="table-bar">
+        <input id="tableSearch" type="search" placeholder="Filter the list" aria-label="Filter the woreda list">
+        <span id="tableCount"></span>
+      </div>
+      <div class="table-wrap">
+        <table id="table">
+          <thead><tr>
+            <th data-k="id" scope="col">ID</th>
+            <th data-k="region" scope="col">Region</th>
+            <th data-k="zone" scope="col">Zone</th>
+            <th data-k="woreda" scope="col">Woreda</th>
+            <th data-k="area_km2" scope="col" class="num">Area km²</th>
+            <th data-k="lat" scope="col" class="num">Lat</th>
+            <th data-k="lon" scope="col" class="num">Lon</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="tab-panel notes" data-panel="notes" role="tabpanel" hidden>
+      <div id="notes"></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p id="footMeta"></p>
+  </footer>
+</div>
+
+<!--LERSHA:SCRIPTS-->
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script src="assets/vendor/echarts/echarts.min.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="data/lersha_data.js"></script>
+<script src="assets/js/dashboard.js"></script>
+<!--/LERSHA:SCRIPTS-->
+</body>
+</html>

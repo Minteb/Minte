@@ -1,0 +1,75 @@
+﻿id,region,zone,woreda,area_km2,lat,lon,list_region,list_zone,list_woreda,match_method
+LW001,Amhara,North Gojam,Mecha,546.6,11.4953,37.1226,Amhara,North Gojam,Mecha,exact
+LW002,Amhara,North Shewa (AM),Ensaro,451.3,9.8385,38.9166,Amhara,North Shewa (AM),Ensaro,exact
+LW003,Amhara,North Shewa (AM),Mojan Wedera,618.2,9.9237,39.5082,Amhara,North Shewa (AM),Mojan Wedera,exact
+LW004,Amhara,North Shewa (AM),Moretna Jiru,660.4,9.9548,39.1538,Amhara,North Shewa (OR),Moratina Jiru,"spelling match, zone corrected"
+LW005,Amhara,South Gondar,Fogera,1335.0,11.8843,37.7526,Amhara,South Gondar,Fogera,exact
+LW006,Central Ethiopia,East Guraghe,Meskan,330.8,8.1581,38.3679,Central Ethiopia,East Guraghe,Meskan,exact
+LW007,Central Ethiopia,East Guraghe,Sodo,553.1,8.2737,38.5865,Central Ethiopia,East Guraghe,Sodo,exact
+LW008,Central Ethiopia,Guraghe,Abeshege,522.1,8.3243,37.6132,Central Ethiopia,Guraghe,Abeshege,exact
+LW009,Central Ethiopia,Guraghe,Endiguagn,151.2,7.8184,37.8751,Central Ethiopia,Guraghe,Endiguagn,exact
+LW010,Central Ethiopia,Guraghe,Enor Ener,334.2,7.9293,37.7275,Central Ethiopia,Guraghe,Enor Ener,exact
+LW011,Central Ethiopia,Guraghe,Geta,200.1,7.9273,37.9696,Central Ethiopia,Guraghe,Geta,exact
+LW012,Central Ethiopia,Guraghe,Gumer,233.0,7.9899,38.054,Central Ethiopia,Guraghe,Gumer,exact
+LW013,Central Ethiopia,Hadiya,Gibe,447.8,7.7358,37.6681,Central Ethiopia,Hadiya,Gibe,exact
+LW014,Central Ethiopia,Hadiya,Mirab Badowach,150.5,7.1514,37.8348,Central Ethiopia,Hadiya,Mirab Badowach,exact
+LW015,Central Ethiopia,Hadiya,Misha,175.0,7.6737,37.8123,Central Ethiopia,Hadiya,Misha,exact
+LW016,Central Ethiopia,Hadiya,Soro,499.2,7.463,37.5409,Central Ethiopia,Hadiya,Soro,exact
+LW017,Central Ethiopia,Kembata,Angacha,153.1,7.3561,37.855,Central Ethiopia,Kembata,Angacha,exact
+LW018,Central Ethiopia,Kembata,Doyogena,130.6,7.3931,37.8004,Central Ethiopia,Hadiya,Doyo gena,"spelling match, zone corrected"
+LW019,Oromia,Arsi,Degeluna Tijo,925.0,7.7545,39.2064,Oromia,Arsi,Degeluna Tijo,exact
+LW020,Oromia,Arsi,Hitosa,690.3,8.0671,39.214,Oromia,Arsi,Hitosa,exact
+LW021,Oromia,Arsi,Inkolo Wabe,317.8,7.4212,39.4344,Oromia,Arsi,Inkolo Wabe,exact
+LW022,Oromia,Arsi,Limu Bilbilo,1149.6,7.4148,39.2091,Oromia,Arsi,Limu Bilbilo,exact
+LW023,Oromia,Arsi,Lude Hitosa,541.3,8.0854,39.4153,Oromia,Arsi,Lude Hitosa,exact
+LW024,Oromia,Arsi,Munessa,1082.5,7.5626,38.9875,Oromia,Arsi,Munessa,exact
+LW025,Oromia,Arsi,Tiyo,604.5,7.8986,39.1479,Oromia,Arsi,Tiyo,exact
+LW026,Oromia,Bale,Agarfa,1221.7,7.3114,39.846,Oromia,Bale,Agarfa,exact
+LW027,Oromia,Bale,Goba (OR),1467.9,6.8556,39.88,Oromia,Bale,Goba (OR),exact
+LW028,Oromia,Bale,Goba town,42.8,7.0215,39.9668,Oromia,Bale,Goba town,exact
+LW029,Oromia,Bale,Goro (Bale),1514.9,6.938,40.4744,Oromia,Bale,Goro (Bale),exact
+LW030,Oromia,Bale,Sinana,1032.8,7.1083,40.1956,Oromia,Bale,Sinana,exact
+LW031,Oromia,Buno Bedele,Bedele Zuria,744.9,8.4376,36.3916,Oromia,Buno Bedele,Bedele Zuria,exact
+LW032,Oromia,Buno Bedele,Dedesa,842.1,8.1208,36.5928,Oromia,Buno Bedele,Dedesa,exact
+LW033,Oromia,Buno Bedele,Gechi,634.0,8.3896,36.4841,Oromia,Buno Bedele,Gechi,exact
+LW034,Oromia,East Shewa,Ada'a,506.9,8.623,38.9936,Oromia,East Shewa,Ada'a,exact
+LW035,Oromia,East Shewa,Gimbichu,665.1,8.9766,39.1459,Oromia,East Shewa,Gimbichu,exact
+LW036,Oromia,East Shewa,Liben Chukala,703.9,8.5054,38.8915,Oromia,East Shewa,Liben Chukala,exact
+LW037,Oromia,East Shewa,Lome (OR),636.8,8.6075,39.1837,Oromia,East shoa,Lome (OR),exact
+LW038,Oromia,Jimma,Dedo,785.3,7.4519,36.8504,Oromia,Jimma,Dedo,exact
+LW039,Oromia,Jimma,Kersa (Jimma),970.6,7.7853,37.0475,Oromia,Jimma,Kersa (Jimma),exact
+LW040,Oromia,Jimma,Seka Chekorsa,825.0,7.5427,36.7102,Oromia,Jimma,Seka Chekorsa,exact
+LW041,Oromia,Jimma,Tiro Afeta,743.8,7.972,37.2479,Oromia,Jimma,Tiro Afeta,exact
+LW042,Oromia,North Shewa (OR),Abichugna Gne'a,676.0,9.6088,39.2493,Oromia,North Shewa (OR),Abichugna Gne'a,exact
+LW043,Oromia,North Shewa (OR),Aleltu,424.6,9.21,39.121,Oromia,North Shewa (OR),Aleltu,exact
+LW044,Oromia,North Shewa (OR),Bereh,318.3,9.2379,38.9258,Oromia,North Shewa (OR),Bereh,exact
+LW045,Oromia,North Shewa (OR),Debre Libanos,282.9,9.6644,38.8419,Oromia,North Shewa (OR),Debre Libanos,exact
+LW046,Oromia,North Shewa (OR),Wuchale,893.1,9.5977,39.0196,Oromia,North Shewa (OR),Wuchale,exact
+LW047,Oromia,Shager City,Galan,123.7,8.8233,38.7862,Oromia,Shager City,Galan,exact
+LW048,Oromia,Shager City,Galan Gudo,151.2,8.8565,38.6824,Oromia,Shager City,Galan Gudo,exact
+LW049,Oromia,Shager City,Kura Jida,245.2,9.0696,38.9565,Oromia,Shager City,Kura Jida,exact
+LW050,Oromia,Shager City,Sebeta,215.0,8.9082,38.5821,Oromia,Shager City,Sebeta,exact
+LW051,Oromia,South West Shewa,Goro (SW Shewa),430.0,8.4331,37.8694,Oromia,South West Shewa,Goro (SW Shewa),exact
+LW052,Oromia,South West Shewa,Seden Sodo,559.4,8.4266,38.2599,Oromia,South West Shewa,Seden Sodo,exact
+LW053,Oromia,South West Shewa,Waliso,727.7,8.5502,38.0666,Oromia,South West Shewa,Waliso,exact
+LW054,Oromia,South West Shewa,Wenchi,465.4,8.6586,37.8997,Oromia,South West Shewa,Wenchi,exact
+LW055,Oromia,West Arsi,Dodola,1647.3,6.8976,39.1226,Oromia,West Arsi,Dodola,exact
+LW056,Oromia,West Arsi,Dodola town,8.2,6.9778,39.1807,Oromia,West Arsi,Dodola town,exact
+LW057,Oromia,West Arsi,Gedeb Asasa,1147.5,7.1945,39.1753,Oromia,West Arsi,Gedeb Asasa,exact
+LW058,Oromia,West Arsi,Kofele,648.9,7.0004,38.8569,Oromia,West Arsi,Kofele,exact
+LW059,Oromia,West Arsi,Kore,501.8,7.2106,38.9004,Oromia,West Arsi,Kore,exact
+LW060,Oromia,West Arsi,Shashemene,379.7,7.1741,38.715,Oromia,West Arsi,Shashemene,exact
+LW061,Oromia,West Arsi,Shashemene town,472.9,7.1958,38.5813,Oromia,West Arsi,Shashemene town,exact
+LW062,Oromia,West Arsi,Wondo,39.7,7.0851,38.6706,Oromia,West Arsi,Wondo,exact
+LW063,Oromia,West Shewa,Ejere /Addis Alem,582.2,9.0506,38.3923,Oromia,West Shewa,Ejere /Addis Alem,exact
+LW064,Oromia,West Shewa,Welmera,437.0,9.1561,38.5136,Oromia,West Shewa,Welmera,exact
+LW065,Sidama,Northern,Gorche,169.5,6.8154,38.6001,Sidama,Northern,Gorche,exact
+LW066,Sidama,Northern,Hawassa Zuria,338.9,7.0496,38.3438,Sidama,Northern,Hawassa Zuria,exact
+LW067,Sidama,Northern,Malga,179.0,6.9248,38.6243,Sidama,Northern,Malga,exact
+LW068,Sidama,Northern,Shebe Dino,165.5,6.8704,38.3921,Sidama,Northern,Shebe Dino,exact
+LW069,Sidama,Northern,Wondo-Genet,204.9,7.0368,38.6131,Sidama,Northern,Wondo-Genet,exact
+LW070,South Ethiopia,Gamo,Arba Minch Zuria,1489.9,5.9429,37.5546,South Ethiopia,Gamo,Arba Minch Zuria,exact
+LW071,South Ethiopia,Gamo,Arba Minch town,33.4,6.0332,37.5536,South Ethiopia,Gamo,Arba Minch town,exact
+LW072,South Ethiopia,Gamo,Dita,283.3,6.2615,37.4263,South Ethiopia,Gamo,Dita,exact
+LW073,Tigray,South Eastern,Enderta,1607.6,13.4632,39.3467,Tigray,South Eastern,Enderta,exact
+LW074,Tigray,South Eastern,Hagere Selam town,5.2,13.6402,39.1701,Tigray,South Eastern,Hagere Selam town,exact

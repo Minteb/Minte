@@ -422,6 +422,7 @@ footer a:first-child{margin-left:0}
       <button aria-pressed="false" data-f="rs">Remote sensing</button>
       <button aria-pressed="false" data-f="gis">GIS and mapping</button>
       <button aria-pressed="false" data-f="ml">Machine learning</button>
+      <button aria-pressed="false" data-f="web">Dashboards</button>
       <button aria-pressed="false" data-f="train">Training</button>
     </div>
     <div class="projects" id="projects">
@@ -443,6 +444,16 @@ footer a:first-child{margin-left:0}
           <p>Maize mapping workflows with Sentinel-2 and machine learning, reaching 80.4% accuracy, integrated with crop-cut surveys, genotypic and household data for landscape-scale yield estimation and varietal adoption analysis.</p>
           <ul class="chips"><li>Sentinel-2</li><li>Random Forest</li><li>Crop cuts</li><li>Data integration</li></ul>
           <div class="links"><a href="#publications">Technical brief</a></div>
+        </div>
+      </article>
+      <article class="project" data-cat="gis web">
+        <div class="thumb"><a href="projects/lersha-dashboard/"><img src="assets/img/lersha-dashboard.jpg" alt="Lersha reach dashboard showing a map of Ethiopia with Lersha woredas coloured by region" loading="lazy"></a></div>
+        <div>
+          <h3>Lersha reach dashboard: where access to finance reaches farmers</h3>
+          <p class="where">Lersha (Green Agro Solution PLC), 2026</p>
+          <p>An interactive web dashboard mapping Lersha's Access to Finance and 2026 climate advisory coverage: 74 woredas in 20 zones across 6 regions, matched to national OCHA boundaries. Cascading region, zone and woreda filters drive the map, charts and table together, with coverage-gap analysis, land-area summaries and CSV or GeoJSON downloads of any selection. A Python pipeline rebuilds everything from the woreda list as the programme expands.</p>
+          <ul class="chips"><li>Leaflet</li><li>ECharts</li><li>Python, GeoPandas</li><li>OCHA COD-AB</li><li>Digital agriculture</li></ul>
+          <div class="links"><a href="projects/lersha-dashboard/" target="_blank" rel="noopener">Open the live dashboard</a></div>
         </div>
       </article>
       <article class="project" data-cat="rs train">
@@ -505,6 +516,17 @@ footer a:first-child{margin-left:0}
       <p>Peer-reviewed work, conference contributions and technical reports. The full record is on <a href="https://scholar.google.com/citations?user=k9OFg1MAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
     </div>
     <ol class="pubs" reversed>
+      <li class="pub">
+        <span class="yr">2026</span>
+        <div>
+          <p class="kind">Journal article</p>
+          <h3>Excessive rainfall anomalies during the dry season (harvest period) and their impact on rainfed crop yields in Ethiopia</h3>
+          <p class="auth">Kern, S., Abera, T., Hailu, B.T., Muhammed, M.A., <strong>Berhanu, M.</strong>, Miehe, G., Zeuss, D.</p>
+          <p class="venue">Science of the Total Environment, vol. 1038, Elsevier</p>
+          <p class="small muted" style="margin-top:.5rem">Uses CHIRPS rainfall, weather stations and crop yield records to show how unexpected heavy rain at harvest time damages cereal yields across Ethiopia, and where these events are most frequent and severe.</p>
+          <div class="links"><a href="https://www.sciencedirect.com/science/article/pii/S004896972600567X" target="_blank" rel="noopener">Read on ScienceDirect</a></div>
+        </div>
+      </li>
       <li class="pub">
         <span class="yr">2026</span>
         <div>
@@ -571,7 +593,7 @@ footer a:first-child{margin-left:0}
         <div>
           <h3>GIS and geospatial analytics consultant</h3>
           <p class="org">Lersha (Green Agro Solution PLC), Addis Ababa</p>
-          <p>Strengthening geospatial infrastructure and spatial data workflows for a digital agriculture platform, including climate-based agronomic advisories and flood vulnerability mapping.</p>
+          <p>Strengthening geospatial infrastructure and spatial data workflows for a digital agriculture platform, including climate-based agronomic advisories, flood vulnerability mapping and the <a href="projects/lersha-dashboard/">Lersha reach dashboard</a>.</p>
         </div>
       </li>
       <li class="tl now">
@@ -647,6 +669,7 @@ footer a:first-child{margin-left:0}
       <figure data-cat="field"><button data-src="assets/field/preflight-assembly.jpg"><img src="assets/field/preflight-assembly.jpg" alt="Pre-flight UAV assembly" loading="lazy"></button><figcaption>Pre-flight assembly</figcaption></figure>
       <figure data-cat="field"><button data-src="assets/field/ebee-case-roadside.jpg"><img src="assets/field/ebee-case-roadside.jpg" alt="Carrying the UAV case on a rural road" loading="lazy"></button><figcaption>Between survey sites</figcaption></figure>
       <figure data-cat="field"><button data-src="assets/img/field-workshop-maize.jpg"><img src="assets/img/field-workshop-maize.jpg" alt="Group field visit in a maize field" loading="lazy"></button><figcaption>Field data collection visit</figcaption></figure>
+      <figure data-cat="maps"><button data-src="assets/img/lersha-dashboard.jpg"><img src="assets/img/lersha-dashboard.jpg" alt="Lersha reach dashboard" loading="lazy"></button><figcaption>Lersha reach dashboard, 2026</figcaption></figure>
       <figure data-cat="maps"><button data-src="assets/img/ethiopian-river-network-qgis-map.jpg"><img src="assets/img/ethiopian-river-network-qgis-map.jpg" alt="Rivers of Ethiopia map" loading="lazy"></button><figcaption>The rivers of Ethiopia, QGIS, 2024</figcaption></figure>
       <figure data-cat="maps"><button data-src="assets/img/geological-map-of-geba-watershed.jpg"><img src="assets/img/geological-map-of-geba-watershed.jpg" alt="Geological map of the Geba watershed" loading="lazy" style="object-fit:contain;background:#fff"></button><figcaption>Geological map, Geba watershed</figcaption></figure>
       <figure data-cat="conf"><button data-src="assets/img/ipora-conference-presentation.jpg"><img src="assets/img/ipora-conference-presentation.jpg" alt="Presenting at IPORA SAEAP 2026" loading="lazy"></button><figcaption>Presenting at IPORA SAEAP 2026</figcaption></figure>

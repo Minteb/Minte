@@ -10,7 +10,7 @@ Personal and academic website of **Mintesnot Berhanu Tilahun**, PhD candidate in
 
 - **Fieldwork** — the 2026 eBee X multispectral UAV campaign (ADD-IN Ethiopia, CGIAR SPIA): launch video, field photos and campaign posts.
 - **About** — research focus, supervisors, partners and skills.
-- **Research** — filterable list of projects: UAV surveys, EO-based maize mapping (ViSTA), CropWatch/ETWatch training, cartography, LiDAR and SpatialWise training.
+- **Research** — filterable list of projects: the interactive Lersha reach dashboard, UAV surveys, EO-based maize mapping (ViSTA), CropWatch/ETWatch training, cartography, LiDAR and SpatialWise training.
 - **Publications** — journal articles, conference papers and technical reports.
 - **Experience, education, talks** — timeline of roles and events.
 - **Gallery** — maps, fieldwork, conferences, LiDAR and reports, with a lightbox viewer.
@@ -26,7 +26,13 @@ assets/
   img/                     maps, conference, LiDAR and report images
   video/                   eBee X launch video and poster frame
   og-image.jpg             preview image for social media links
+projects/
+  lersha-dashboard/        interactive Lersha reach dashboard (live at /Minte/projects/lersha-dashboard/)
 ```
+
+## Featured project
+
+**[Lersha reach dashboard](https://minteb.github.io/Minte/projects/lersha-dashboard/)** — an interactive map and chart dashboard of Lersha (Green Agro Solution PLC) Access to Finance coverage across 74 woredas, 20 zones and 6 regions of Ethiopia. Built with Leaflet and ECharts; data prepared with a Python/GeoPandas pipeline.
 
 ## Updating the site
 
